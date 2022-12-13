@@ -1,0 +1,26 @@
+@startuml
+
+top to bottom direction
+
+class GerenciadorDeArquivosDocx{
+    + salvarTodos(List<Docx> arquivos)
+}
+class GerenciadorDeArquivosTxt{
+    + salvarTodos(List<Txt> arquivos)
+}
+class Docx{
+    + abrirDocx()
+    fecharDocx()
+    salvarDocx()
+}
+class Txt{
+    + abrirTxt()
+    fecharTxt()
+    salvarTxt()
+}
+
+
+GerenciadorDeArquivosDocx - Docx
+GerenciadorDeArquivosTxt  - Txt
+
+@enduml

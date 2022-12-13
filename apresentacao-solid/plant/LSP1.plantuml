@@ -1,0 +1,27 @@
+@startuml
+
+top to bottom direction
+
+
+class Arquivo{
+
+    + abrir()
+    + fechar()
+    + salvar()
+
+}
+class Docx{
++ abrir()
+    + fechar()
+    + salvar()
+}
+class Txt{
++ abrir()
+    + fechar()
+    + salvar()
+}
+Arquivo <|-- Docx
+Arquivo <|-- Txt
+
+
+@enduml

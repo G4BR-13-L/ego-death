@@ -1,0 +1,23 @@
+
+@startuml
+
+class Temporizador{
+
+}
+
+interface Temporizavel{
+
++ timeOut() : void
+}
+class Porta{
+
+}
+
+class PortaComAlarme{
+
+}
+
+Temporizador --> Temporizavel
+Porta ..|> Temporizavel
+PortaComAlarme --|> Porta
+@enduml

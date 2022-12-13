@@ -1,0 +1,22 @@
+@startuml Exemplos - SRP
+
+' class DataManager{
+'     + conectarBancoDeDados():Conexao
+'     + consultarDados(): Dados
+'     + escreverArquivo():void
+' }
+
+
+
+class ArquivoIO{
+    escreverArquivo():void
+}
+
+class DadosRepository(){
+    + consultarDados(): Dados
+}
+
+class BancoDeDados(){
+    + conectarBancoDeDados():Conexao
+}
+@enduml

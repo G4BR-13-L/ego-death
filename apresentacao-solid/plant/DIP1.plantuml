@@ -1,0 +1,34 @@
+
+@startuml
+
+top to bottom direction
+'left to right direction
+class Aplicacao{ }
+class iPhone{ }
+class Samsung{ }
+class Motorola{ }
+class OnePlus{ }
+class Xiaomi{ }
+class GooglePixel{ }
+class Huawei{ }
+
+class SmartPhone{  }
+
+Aplicacao --> SmartPhone
+
+SmartPhone <|.. iPhone 
+SmartPhone <|.. Samsung 
+SmartPhone <|.. Motorola 
+SmartPhone <|.. OnePlus 
+SmartPhone <|.. Xiaomi 
+SmartPhone <|.. GooglePixel 
+SmartPhone <|.. Huawei 
+
+
+' iPhone -[hidden]- Xiaomi
+' Samsung -[hidden]- GooglePixel
+' Motorola -[hidden]- Huawei
+' OnePlus -[hidden]- Aplicacao
+
+
+@enduml
