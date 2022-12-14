@@ -8,8 +8,6 @@ import org.junit.Test;
 import src.Criptografia.*;;
 
 public class CriptografiaTest {
-    
-
     @Test
     public void EncriptarTest() throws UnsupportedEncodingException{
         assertEquals("0 0 00 0000 0 00", Criptografia.encriptar("C"));
