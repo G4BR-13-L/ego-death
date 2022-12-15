@@ -1,7 +1,6 @@
-package src;
-import java.io.UnsupportedEncodingException;
 
-import src.Criptografia.Criptografia;
+import java.io.UnsupportedEncodingException;
+import Criptografia.Criptografia;
 
 public class Main {
     public static void main(String[] args) throws UnsupportedEncodingException {
