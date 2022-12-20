@@ -1,0 +1,14 @@
+<main>
+  <header>
+    <h1>PokéPedia</h1>
+  </header>
+  <section>
+    <input type="text" name="" id="" [(ngModel)]="pokemonName">
+    <button (click)="findPokemon()">Buscar pokemon</button>
+  </section>
+  <section id="content">
+    <div id="app">
+      <app-card (pokemon)=this.pokemon></app-card>
+    </div>
+  </section>
+</main>

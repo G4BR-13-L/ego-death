@@ -1,0 +1,88 @@
+$primary-green: rgba(35, 109, 35, 0.801);
+$primary-purple: #5e0f5e;
+
+.card {
+  width: 12rem auto;
+  background: #444;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.20), 0 3px 6px rgba(0, 0, 0, 0.30);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card--id {
+  width: 3rem;
+  padding: .5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  border-radius: 0 0 10px 0;
+  top: 0;
+  left: 0;
+}
+
+.card--name {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card--image {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.card--details {
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.type--badge {
+  border: none;
+  border-radius: 15px;
+  padding: 1px 20px;
+  margin-right: 10px;
+  font-size: .7rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+
+  &.poison {
+    background: $primary-purple;
+  }
+
+  &.grass {
+    background: $primary-green;
+  }
+}
+
+
+.type-background {
+  &.poison {
+    background: linear-gradient(130deg, rgba(154, 48, 240, 0.89) 0%, rgb(160, 64, 160) 100%);
+  }
+
+  &.grass {
+    background: linear-gradient(130deg, rgb(120, 200, 80) 0%, rgb(160, 64, 160) 100%);
+  }
+
+  &.fire {
+    background: linear-gradient(130deg, rgba(240, 128, 48, 0.89) 0%, rgb(160, 64, 160) 100%);
+  }
+}
