@@ -17,3 +17,7 @@ export function init() {
 export function getHistory() {
   return JSON.parse(localStorage.getItem('history') ?? "");
 }
+
+export function cleanStorage(){
+  localStorage.setItem('history', JSON.stringify([]));
+}

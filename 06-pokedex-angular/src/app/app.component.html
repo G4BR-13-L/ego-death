@@ -20,5 +20,15 @@
     <div class="history-wrapper">
       <app-history-card *ngFor="let poke of this.history" [pokemon]="poke"></app-history-card>
     </div>
+
+    
+  </section>
+  <section class="options-section">
+    <div class="options">
+      <h4>Ferramentas</h4>
+      <div>
+        <button (click)="cleanHistory()">Limpar Histórico</button>
+      </div>
+    </div>
   </section>
 </main>

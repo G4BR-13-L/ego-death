@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Pokemon } from './domains/Pokemon';
 import { ConsumerService } from './services/consumer/consumer.service';
-import { getHistory, init, savePokemon } from './services/storage/storage.service';
+import { cleanStorage, getHistory, init, savePokemon } from './services/storage/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -31,12 +31,19 @@ export class AppComponent {
   findPokemon() {
     savePokemon(this.pokemon)
     this.history = getHistory();
-    this.service.find(this.pokemonName).then((result: Pokemon) => {
+    this.service.find(this.pokemonName.toLowerCase()).then((result: Pokemon) => {
       console.log(result)
       this.pokemon = result;
     }
     )
       .catch((err) => console.log(err));
     console.log("Ok:" + this.pokemonName)
+  }
+
+  cleanHistory(){
+    if( confirm("Tem certeza que deseja apagar o histórico?") ){
+      cleanStorage();
+      this.history = getHistory();
+    }
   }
 }
