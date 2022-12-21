@@ -1,22 +1,27 @@
-<div class="card type-background grass">
+
+
+<div class="card type-background {{this.type}}"Z>
   <div>
-    <span class="card--id">#1</span>
-    <span class="type--badge grass">grass</span>
-    <span class="type--badge poison">poison</span>
+    <span class="card--id">#{{this.pokemon.id}}</span>
+    <div>
+      <span *ngFor="let type of this.pokemon.types" class="type--badge {{type.type?.name}}">{{type.type?.name}}</span>
+      <!-- <span class="type--badge grass">grass</span>
+      <span class="type--badge poison">poison</span> -->
+    </div>
   </div>
 
 
   <img class="card--image"
-    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-    alt=${pokemon.name} />
+  [src]="this.getSprite()"
+    [alt]="this.pokemon.name" />
   <h1 class="card--name">{{this.pokemon.name}}</h1>
 
   <div class="card--details">
     <span>
-      <strong>Height:</strong> 10cm
+      <strong>Height:</strong> {{this.getHeight()}}m
     </span>
     <span>
-      <strong>Weight:</strong> 10kg
+      <strong>Weight:</strong> {{this.getWeight()}}kg
     </span>
   </div>
 

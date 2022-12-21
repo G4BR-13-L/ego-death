@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Pokemon } from './domains/Pokemon';
-import { ConsumerService } from './services/consumer.service';
+import { ConsumerService } from './services/consumer/consumer.service';
+import { getHistory, init, savePokemon } from './services/storage/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -11,21 +12,31 @@ export class AppComponent {
   title = 'pokedex';
 
   pokemonName: string = "";
-  pokemon: Pokemon = new Pokemon();
+  history: Pokemon[] = [];
+
+  public pokemon: Pokemon = new Pokemon;
 
   constructor(private service: ConsumerService) {
-    this.service.find("ditto").subscribe({
-      next: (result: Pokemon) => {
-        this.pokemon = result;
-        console.log(result as Pokemon)
-      },
-      error: (error) => {
-        console.log(error)
-      }
-    })
+    init();
+    this.history = getHistory();
+    this.service = service;
+    this.service.find("arceus").then((result: Pokemon) => {
+      console.log(result)
+      this.pokemon = result;
+    }
+    )
+      .catch((err) => console.log(err));
   }
 
-  findPokemon(){
-    console.log("Ok:"+this.pokemonName)
+  findPokemon() {
+    savePokemon(this.pokemon)
+    this.history = getHistory();
+    this.service.find(this.pokemonName).then((result: Pokemon) => {
+      console.log(result)
+      this.pokemon = result;
+    }
+    )
+      .catch((err) => console.log(err));
+    console.log("Ok:" + this.pokemonName)
   }
 }

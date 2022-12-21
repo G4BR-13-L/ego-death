@@ -1,5 +1,4 @@
 
-
 export interface Ability {
   ability: Species;
   is_hidden: boolean;
@@ -183,6 +182,14 @@ export class Pokemon {
   public species?: Species;
   public sprites?: Sprites;
   public stats?: Stat[];
-  public types?: Type[];
+  public types: Type[] = [];
   public weight?: number;
+
+
+
+  /*public get type(): string {
+
+      return this.types[0].type.name ?? "";
+    
+  }*/
 }
