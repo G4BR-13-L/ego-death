@@ -20,18 +20,31 @@ $unknown-color: rgb(255, 213, 213);
 $shadow-color: rgb(20, 16, 56);
 
 .card-history-container {
-  border-radius: 10px;
   height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  overflow: hidden;
 
   .image-container {
+    z-index: 20;
+    height: 200px;
+    img{
+      height: 100%;
+      transform: translateX(-30px);
+    }
   }
 
   .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4{
+      font-size: 16px;
+    }
   }
 
   &.poison {

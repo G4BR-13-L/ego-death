@@ -19,10 +19,10 @@ export class CardComponent {
   }
 
   getSprite() {
-    if (this.pokemon.sprites?.front_default == undefined) {
+    if (this.pokemon.sprites?.other?.dream_world.front_default == undefined) {
       return '';
     } else {
-      return this.pokemon.sprites?.front_default;
+      return this.pokemon.sprites?.other?.dream_world.front_default;
     }
   }
 
