@@ -2,13 +2,23 @@
   <header>
     <h1>PokéPedia</h1>
   </header>
-  <section>
+
+  <section class="search-container">
     <input type="text" name="" id="" [(ngModel)]="pokemonName">
     <button (click)="findPokemon()">Buscar pokemon</button>
   </section>
+
   <section id="content">
     <div id="app">
-      <app-card (pokemon)=this.pokemon></app-card>
+      <app-card [pokemon]="this.pokemon" [type]="this.pokemon.types[0].type.name"></app-card>
+    </div>
+  </section>
+
+  <section class="history">
+    <h2>Hostórico de busca</h2>
+
+    <div class="history-wrapper">
+      <app-history-card *ngFor="let poke of this.history" [pokemon]="poke"></app-history-card>
     </div>
   </section>
 </main>
