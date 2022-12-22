@@ -185,11 +185,4 @@ export class Pokemon {
   public types: Type[] = [];
   public weight?: number;
 
-
-
-  /*public get type(): string {
-
-      return this.types[0].type.name ?? "";
-    
-  }*/
 }
