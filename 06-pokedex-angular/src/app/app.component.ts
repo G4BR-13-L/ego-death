@@ -28,6 +28,9 @@ export class AppComponent {
       .catch((err) => console.log(err));
   }
 
+
+
+
   findPokemon() {
     savePokemon(this.pokemon)
     this.history = getHistory();
