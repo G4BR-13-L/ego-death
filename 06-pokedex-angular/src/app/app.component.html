@@ -16,8 +16,11 @@
 
   <section id="content">
     
-      <app-card [pokemon]="this.pokemon" [type]="this.pokemon.types[0].type.name"
-        (addToFavorites)="addToFavorites($event)"></app-card>
+      <app-card 
+      [pokemon]="this.pokemon" 
+      [type]="this.pokemon.types[0].type.name"
+      (addToFavorites)="addToFavorites($event)"
+        ></app-card>
   </section>
 
   <section class="favoritos">
@@ -28,6 +31,7 @@
       [pokemon]="poke" 
       [isFavorite]="true"
       (removeFromFavorites)="removeFromFavorites($event)"
+      (viewPokemon)="viewPokemon($event)"
       ></pokemon-card>
     </div>
   </section>
@@ -37,7 +41,10 @@
     <h2>Hostórico de busca</h2>
 
     <div class="history-wrapper">
-      <pokemon-card *ngFor="let poke of this.history" [pokemon]="poke"></pokemon-card>
+      <pokemon-card *ngFor="let poke of this.history" [pokemon]="poke"
+      
+      (viewPokemon)="viewPokemon($event)"
+      ></pokemon-card>
     </div>
 
   </section>

@@ -81,6 +81,10 @@ export class AppComponent {
 
   }
 
+  viewPokemon(poke: Pokemon){
+    this.pokemon = poke;
+  }
+
   cleanHistory() {
     if (confirm("Tem certeza que deseja apagar o histórico?")) {
       cleanStorage();

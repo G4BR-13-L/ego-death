@@ -11,6 +11,7 @@ export class PokemonCardComponent implements OnInit {
   @Input() pokemon: Pokemon = new Pokemon;
   @Input() isFavorite = false;
   @Output() removeFromFavorites = new EventEmitter<Pokemon>();
+  @Output() viewPokemon = new EventEmitter<Pokemon>();
   
   constructor() { }
 
@@ -27,6 +28,10 @@ export class PokemonCardComponent implements OnInit {
 
   remove(){
     this.removeFromFavorites.emit(this.pokemon)
+  }
+
+  view(){
+    this.viewPokemon.emit(this.pokemon)
   }
 
 }
