@@ -10,18 +10,33 @@
 
   <section id="content">
     <div id="app">
-      <app-card [pokemon]="this.pokemon" [type]="this.pokemon.types[0].type.name"></app-card>
+      <app-card [pokemon]="this.pokemon" [type]="this.pokemon.types[0].type.name"
+        (addToFavorites)="addToFavorites($event)"></app-card>
     </div>
   </section>
+
+
+
+  <section class="favoritos">
+    <h2>Favoritos</h2>
+    <div class="favoritos-wrapper">
+      <pokemon-card 
+      *ngFor="let poke of this.favorites" 
+      [pokemon]="poke" 
+      [isFavorite]="true"
+      (removeFromFavorites)="removeFromFavorites($event)"
+      ></pokemon-card>
+    </div>
+  </section>
+
 
   <section class="history">
     <h2>Hostórico de busca</h2>
 
     <div class="history-wrapper">
-      <app-history-card *ngFor="let poke of this.history" [pokemon]="poke"></app-history-card>
+      <pokemon-card *ngFor="let poke of this.history" [pokemon]="poke"></pokemon-card>
     </div>
 
-    
   </section>
   <section class="options-section">
     <div class="options">

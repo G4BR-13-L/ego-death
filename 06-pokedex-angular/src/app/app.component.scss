@@ -66,6 +66,22 @@ main {
   padding: 0;
   margin: 0;
 }
+.favoritos {
+  h2 {
+    margin: 80px auto 20px;
+    text-align: center;
+    color: white;
+  }
+  .favoritos-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    //grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}
+
 .history {
   h2 {
     margin: 80px auto 20px;
@@ -76,10 +92,13 @@ main {
     width: 60%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    //grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
   }
 }
+
+
 .options-section {
   padding-bottom: 100px;
   .options {

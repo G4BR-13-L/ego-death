@@ -1,5 +1,5 @@
 import { Pokemon, Type } from './../../domains/Pokemon';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -12,6 +12,7 @@ export class CardComponent {
 
   @Input() pokemon: Pokemon = new Pokemon;
   @Input() type: any;
+  @Output() addToFavorites = new EventEmitter<Pokemon>();
 
 
   constructor() {
@@ -26,6 +27,9 @@ export class CardComponent {
     }
   }
 
+  add(){
+    this.addToFavorites.emit(this.pokemon)
+  }
 
   getHeight() {
     if (this.pokemon.height) {

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { HistoryCardComponent } from './components/history-card/history-card.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 
 
 const components:any = [
@@ -17,14 +17,14 @@ const components:any = [
   declarations: [
     AppComponent,
     ...components,
-    HistoryCardComponent,
+    PokemonCardComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

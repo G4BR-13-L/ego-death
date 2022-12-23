@@ -1,12 +1,14 @@
 
 
 <div class="card type-background {{this.type}}"Z>
-  <div>
-    <span class="card--id">#{{this.pokemon.id}}</span>
+  
+  <div class="card-header">
+    <div class="card--id">#{{this.pokemon.id}}</div>
     <div>
       <span *ngFor="let type of this.pokemon.types" class="type--badge {{type.type.name}}">{{type.type.name}}</span>
-      <!-- <span class="type--badge grass">grass</span>
-      <span class="type--badge poison">poison</span> -->
+    </div>
+    <div class="favorite-icon" >
+      <i class='bx bx-star' (click)="add()" ></i>
     </div>
   </div>
 
