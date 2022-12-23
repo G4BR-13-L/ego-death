@@ -36,23 +36,31 @@ export class AppComponent {
   findPokemon() {
     this.service.find(
       this.pokemonName
-      .toLowerCase()
-      .trim()
-      .replace(',','')
-      .replace('#','')).subscribe({
-      next: (result: Pokemon) => {
-        this.pokemon = result;
-        savePokemon(this.pokemon)
-        this.history = getHistory();
-        console.log(result as Pokemon)
-      },
-      error: (error) => {
-        console.log(error)
-      }
-    })
+        .toLowerCase()
+        .trim()
+        .replace(',', '')
+        .replace('#', '')).subscribe({
+          next: (result: Pokemon) => {
+            this.pokemon = result;
+            this.addToHistory(this.pokemon)
+            console.log(result as Pokemon)
+          },
+          error: (error) => {
+            console.log(error)
+          }
+        })
     console.log("Ok:" + this.pokemonName)
   }
 
+  addToHistory(poke: Pokemon) {
+    for (let p of this.history) {
+      if (p.id == poke.id) {
+        return;
+      }
+    }
+    this.history.push(poke);
+    savePokemon(poke);
+  }
   addToFavorites(poke: Pokemon) {
     console.log("Adicionaod aos favoritos: " + poke.name)
     for (let p of this.favorites) {
@@ -70,7 +78,7 @@ export class AppComponent {
     console.log("removido dos favoritos: " + poke.name)
     this.favorites = this.favorites.filter((p) => p.id != poke.id)
     saveFavorites(this.favorites);
-    
+
   }
 
   cleanHistory() {
