@@ -1,3 +1,22 @@
+div.img-bg-gradient {
+  background: rgb(0, 1, 27);
+  background: linear-gradient(0deg, rgba(0, 1, 27, 1) 1%, rgba(74, 74, 241, 0.11386561460521705) 18%);
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+div.img-bg-image {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2456e9f4-4e95-4540-a151-3c8a59ae3a3c/dahv70z-d5fe9b17-a2d0-4be2-915e-9be546bb6fa8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI0NTZlOWY0LTRlOTUtNDU0MC1hMTUxLTNjOGE1OWFlM2EzY1wvZGFodjcwei1kNWZlOWIxNy1hMmQwLTRiZTItOTE1ZS05YmU1NDZiYjZmYTgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9aCbUrp4U2LygXH3QOPT4riwnV1BdtvdrgrvaK2BOSs");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 header {
   display: flex;
   height: clamp(20vh, 30%, 45vh);
@@ -5,14 +24,18 @@ header {
   align-items: flex-end;
   position: relative;
   margin-bottom: 1%;
+  z-index: 20;
 }
 
 header > h1 {
-  font-size: clamp(2rem, 10vw, 5rem);
+  font-size: clamp(3rem, 20vw, 7rem);
   color: #fff;
   text-transform: capitalize;
   position: relative;
-  text-shadow: 10px 3px 0 rgb(158, 54, 54);
+  text-shadow: 10px 10px 0 rgb(2, 48, 133);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgb(2, 48, 133);
+  color: rgb(255, 212, 21);
 }
 #content {
   padding: 1rem;
@@ -30,28 +53,28 @@ header > h1 {
 
 .search-container {
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: center;
+  input,
+  button {
+    z-index: 70;
+  }
   input {
-    height: 40px;
-    line-height: 30px;
+    height: 20px;
+    line-height: 20px;
     border: none;
     font-size: 29px;
     justify-content: center;
     display: flex;
     padding: 10px;
-    border-radius: 10px;
-    margin-right: 20px;
+    border-radius: 10px 0 0 10px;
   }
   button {
     background-color: rgb(28, 141, 227);
-    height: 40px;
-    padding: 15px;
-    font-size: 29px;
-    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0 10px 10px 0;
     border: none;
-    height: 100%;
     &:hover {
       background-color: rgb(21, 122, 217);
       cursor: pointer;
@@ -98,7 +121,6 @@ main {
   }
 }
 
-
 .options-section {
   padding-bottom: 100px;
   .options {
@@ -106,12 +128,13 @@ main {
     margin: 30px auto;
     border-radius: 10px;
     height: 180px;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     flex-direction: column;
     h4 {
       text-align: center;
+      color: white;
     }
     div {
       display: flex;
@@ -126,7 +149,7 @@ main {
         border: none;
         height: 100%;
         &:hover {
-          background-color:rgb(157, 188, 218);
+          background-color: rgb(157, 188, 218);
           cursor: pointer;
         }
       }
