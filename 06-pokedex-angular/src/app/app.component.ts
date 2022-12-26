@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './domains/Pokemon';
 import { ConsumerService } from './services/consumer/consumer.service';
 import { cleanStorage, getFavorites, getHistory, init, saveFavorites, savePokemon } from './services/storage/storage.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,14 @@ export class AppComponent implements OnInit {
 
   public pokemon: Pokemon = new Pokemon;
 
-  constructor(private service: ConsumerService) {
+  public pokemonForm:any = this.formBuilder.group({
+    pokemonName: "",
+  });
+
+  constructor(
+    private service: ConsumerService,
+    private formBuilder: FormBuilder
+    ) {
 
   }
 
@@ -38,9 +46,9 @@ export class AppComponent implements OnInit {
 
   }
 
-  findPokemon() {
+  onSubmit(): void {
     this.service.find(
-      this.pokemonName
+      this.pokemonForm.value.pokemonName
         .toLowerCase()
         .trim()
         .replace(',', '')
