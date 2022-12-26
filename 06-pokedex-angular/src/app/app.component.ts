@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './domains/Pokemon';
 import { ConsumerService } from './services/consumer/consumer.service';
 import { cleanStorage, getFavorites, getHistory, init, saveFavorites, savePokemon } from './services/storage/storage.service';
@@ -8,7 +8,7 @@ import { cleanStorage, getFavorites, getHistory, init, saveFavorites, savePokemo
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'pokedex';
 
   pokemonName: string = "";
@@ -18,10 +18,14 @@ export class AppComponent {
   public pokemon: Pokemon = new Pokemon;
 
   constructor(private service: ConsumerService) {
+
+  }
+
+  ngOnInit() {
     init();
     this.history = getHistory();
     this.favorites = getFavorites();
-    this.service = service;
+    this.service = this.service;
     this.service.find("arceus").subscribe({
       next: (result: Pokemon) => {
         this.pokemon = result;
@@ -31,6 +35,7 @@ export class AppComponent {
         console.log(error)
       }
     })
+
   }
 
   findPokemon() {
@@ -81,7 +86,7 @@ export class AppComponent {
 
   }
 
-  viewPokemon(poke: Pokemon){
+  viewPokemon(poke: Pokemon) {
     this.pokemon = poke;
   }
 
