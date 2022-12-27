@@ -2,7 +2,7 @@
   z-index: 60;
   width: 80%;
   margin: 0 auto;
-  color: white;
+
   padding: 1.8rem;
   border-radius: 20px;
   text-align: center;
@@ -11,6 +11,9 @@
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s ease-in-out all;
+  &:hover {
+    box-shadow: 0 0px 30px rgba(255, 246, 246, 0.2), 0 3px 6px rgba(255, 255, 255, 0.3);
+  }
   .card-header {
     display: flex;
     flex-direction: row;
@@ -19,7 +22,7 @@
     .card--id {
       width: 3rem;
       padding: 0.5rem;
-      color: white;
+      //color: white;
       font-size: 1.5rem;
       font-weight: 700;
       border-radius: 0 0 10px 0;
@@ -39,15 +42,16 @@
       }
     }
   }
+  
 }
 
-.card:hover {
-  box-shadow: 0 0px 30px rgb(80, 80, 80);
-}
+// .card:hover {
+//   box-shadow: 0 0px 30px rgb(80, 80, 80);
+// }
 
 .card--name {
   text-transform: capitalize;
-  color: #fff;
+  //color: #fff;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -61,7 +65,7 @@
 
 .card--details {
   font-size: 1rem;
-  color: white;
+  //color: white;
   display: flex;
   justify-content: space-between;
 }
