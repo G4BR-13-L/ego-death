@@ -73,24 +73,24 @@ $shadow-color-gradient:linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 2
 html,
 body {
   font-family: 'Poppins', sans-serif;
-   background: rgb(0,1,27);
-   z-index: -3;
+  background: rgb(0,1,27);
+  z-index: -3;
   
 }
 
 .type-background {
   &.poison {
-      background:$primary-green-gradient; 
+    background:$primary-green-gradient; 
   }
-
+  
   &.grass {
-      background:$primary-purple-gradient; 
+    background:$primary-purple-gradient; 
   }
-
+  
   &.fire {
-      background:$fire-color-gradient; 
+    background:$fire-color-gradient; 
   }
-
+  
   &.normal {
       background:$normal-color-gradient; 
   }

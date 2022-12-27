@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './domains/Pokemon';
 import { ConsumerService } from './services/consumer/consumer.service';
-import { cleanStorage, getFavorites, getHistory, init, saveFavorites, savePokemon } from './services/storage/storage.service';
+import { StorageService } from './services/storage/storage.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -24,15 +24,16 @@ export class AppComponent implements OnInit {
 
   constructor(
     private service: ConsumerService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private storage: StorageService
     ) {
 
   }
 
   ngOnInit() {
-    init();
-    this.history = getHistory();
-    this.favorites = getFavorites();
+    this.storage.init();
+    this.history = this.storage.getHistory();
+    this.favorites = this.storage.getFavorites();
     this.service = this.service;
     this.service.find("arceus").subscribe({
       next: (result: Pokemon) => {
@@ -72,7 +73,7 @@ export class AppComponent implements OnInit {
       }
     }
     this.history.push(poke);
-    savePokemon(poke);
+    this.storage.savePokemon(poke);
   }
   addToFavorites(poke: Pokemon) {
     console.log("Adicionaod aos favoritos: " + poke.name)
@@ -83,14 +84,14 @@ export class AppComponent implements OnInit {
     }
     if (this.favorites.length < 10) {
       this.favorites.push(poke);
-      saveFavorites(this.favorites);
+      this.storage.saveFavorites(this.favorites);
     }
   }
 
   removeFromFavorites(poke: Pokemon) {
     console.log("removido dos favoritos: " + poke.name)
     this.favorites = this.favorites.filter((p) => p.id != poke.id)
-    saveFavorites(this.favorites);
+    this.storage.saveFavorites(this.favorites);
 
   }
 
@@ -100,8 +101,15 @@ export class AppComponent implements OnInit {
 
   cleanHistory() {
     if (confirm("Tem certeza que deseja apagar o histórico?")) {
-      cleanStorage();
-      this.history = getHistory();
+      this.storage.cleanCollection('history');
+      this.history = this.storage.getHistory();
+    }
+  }
+
+  cleanFavorites() {
+    if (confirm("Tem certeza que deseja apagar os favoritos?")) {
+      this.storage.cleanCollection('favorites');
+      this.favorites = this.storage.getFavorites();
     }
   }
 }

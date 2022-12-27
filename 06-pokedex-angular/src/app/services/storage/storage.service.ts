@@ -1,32 +1,49 @@
 import { Pokemon } from './../../domains/Pokemon';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class StorageService {
 
-export function savePokemon(pokemon: Pokemon) {
-  let history: Pokemon[] = JSON.parse(localStorage.getItem('history') ?? "");
-  history.push(pokemon);
-  localStorage.setItem('history', JSON.stringify(history));
-}
+  constructor() { }
 
-export function init() {
-  let h = localStorage.getItem('history');
-  if (!h) {
-    localStorage.setItem('history', JSON.stringify([]));
-    localStorage.setItem('favorites', JSON.stringify([]));
+  savePokemon(pokemon: Pokemon) {
+    let history: Pokemon[] = this.getHistory();
+    history.push(pokemon);
+    this.save('history', history);
   }
-}
 
-export function saveFavorites(favorites: Pokemon[]){
-    localStorage.setItem('favorites', JSON.stringify(favorites))
-}
+  init() {
+    if (!this.getHistory()) {
+      this.cleanCollection('history');
+    }
+    if (!this.getFavorites) {
+      this.cleanCollection('favorites');
+    }
+  }
 
-export function getHistory() {
-  return JSON.parse(localStorage.getItem('history') ?? JSON.stringify([]));
-}
+  saveFavorites(favorites: Pokemon[]):void {
+    this.save('favorites', favorites);
+  }
 
-export function getFavorites() {
-  return JSON.parse(localStorage.getItem('favorites') ?? JSON.stringify([]));
-}
+  getHistory() {
+    return this.get('history');
+  }
 
-export function cleanStorage(){
-  localStorage.setItem('history', JSON.stringify([]));
+  getFavorites(): any {
+    return this.get('favorites');
+  }
+
+  cleanCollection(key: string): void{
+    localStorage.setItem(key, JSON.stringify([]));
+  }
+
+  private save(key: string, value: any): void{
+    localStorage.setItem(key, JSON.stringify(value));
+  } 
+
+  private get(key: string): any{
+    return JSON.parse(localStorage.getItem(key) ?? JSON.stringify([]));
+  }
 }

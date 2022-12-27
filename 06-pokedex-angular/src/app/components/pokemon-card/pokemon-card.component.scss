@@ -6,6 +6,10 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0px 30px rgba(255, 246, 246, 0.2), 0 3px 6px rgba(255, 255, 255, 0.3);
+  }
 
   .image-container {
     z-index: 20;
