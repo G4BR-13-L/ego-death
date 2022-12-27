@@ -19,7 +19,7 @@ export class CardComponent {
    
   }
 
-  getSprite() {
+  getSprite() : string{
     if (this.pokemon.sprites?.other?.dream_world.front_default == undefined) {
       return '';
     } else {
@@ -27,7 +27,7 @@ export class CardComponent {
     }
   }
 
-  add(){
+  add(): void{
     this.addToFavorites.emit(this.pokemon)
   }
 
@@ -38,11 +38,11 @@ export class CardComponent {
       return '';
     }
   }
-  getWeight() {
+  getWeight() : number{
     if (this.pokemon.weight) {
       return this.pokemon.weight / 10;
     } else {
-      return '';
+      return 0;
     }
   }
 

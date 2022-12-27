@@ -12,13 +12,13 @@ export class PokemonCardComponent implements OnInit {
   @Input() isFavorite = false;
   @Output() removeFromFavorites = new EventEmitter<Pokemon>();
   @Output() viewPokemon = new EventEmitter<Pokemon>();
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getSprite() {
+  getSprite(): string {
     if (this.pokemon.sprites?.other?.dream_world.front_default == undefined) {
       return '';
     } else {
@@ -26,11 +26,11 @@ export class PokemonCardComponent implements OnInit {
     }
   }
 
-  remove(){
+  remove(): void {
     this.removeFromFavorites.emit(this.pokemon)
   }
 
-  view(){
+  view(): void {
     this.viewPokemon.emit(this.pokemon)
   }
 

@@ -27,11 +27,11 @@ export class StorageService {
     this.save('favorites', favorites);
   }
 
-  getHistory() {
+  getHistory(): Pokemon[]{
     return this.get('history');
   }
 
-  getFavorites(): any {
+  getFavorites(): Pokemon[] {
     return this.get('favorites');
   }
 

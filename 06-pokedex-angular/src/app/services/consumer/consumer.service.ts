@@ -12,20 +12,6 @@ export class ConsumerService {
 
   readonly URL_API = `https://pokeapi.co/api/v2/pokemon/`
 
-  // find(param: string) {
-  //   //return this.http.get(`${this.URL_API}${param}`) as Pokemon;
-
-  //   return fetch(`${this.URL_API}${param}`, {
-  //     method: 'GET',
-  //     headers: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     mode: 'cors',
-  //   })
-  //     .then((res) => res.json())
-  // }
-
   find(  param:string ): Observable<Pokemon> {
 
     return this.http.get(`${this.URL_API}${param}`) as Observable<Pokemon>;

@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
     console.log("Ok:" + this.pokemonName)
   }
 
-  addToHistory(poke: Pokemon) {
+  addToHistory(poke: Pokemon): void {
     for (let p of this.history) {
       if (p.id == poke.id) {
         return;
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit {
     this.history.push(poke);
     this.storage.savePokemon(poke);
   }
-  addToFavorites(poke: Pokemon) {
+  addToFavorites(poke: Pokemon): void {
     console.log("Adicionaod aos favoritos: " + poke.name)
     for (let p of this.favorites) {
       if (p.id == poke.id) {
@@ -88,25 +88,25 @@ export class AppComponent implements OnInit {
     }
   }
 
-  removeFromFavorites(poke: Pokemon) {
+  removeFromFavorites(poke: Pokemon): void {
     console.log("removido dos favoritos: " + poke.name)
     this.favorites = this.favorites.filter((p) => p.id != poke.id)
     this.storage.saveFavorites(this.favorites);
 
   }
 
-  viewPokemon(poke: Pokemon) {
+  viewPokemon(poke: Pokemon) : void{
     this.pokemon = poke;
   }
 
-  cleanHistory() {
+  cleanHistory(): void {
     if (confirm("Tem certeza que deseja apagar o histórico?")) {
       this.storage.cleanCollection('history');
       this.history = this.storage.getHistory();
     }
   }
 
-  cleanFavorites() {
+  cleanFavorites(): void {
     if (confirm("Tem certeza que deseja apagar os favoritos?")) {
       this.storage.cleanCollection('favorites');
       this.favorites = this.storage.getFavorites();
