@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy":"ng build  --base-href 'https://G4BR-13-L.github.io/ego-death/' && npx angular-cli-ghpages --dir=dist/pokedex"
   },
   "private": true,
   "dependencies": {
