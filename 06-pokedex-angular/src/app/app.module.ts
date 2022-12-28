@@ -6,19 +6,13 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 
 
-const components:any = [
-  CardComponent
-]
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...components,
-    PokemonCardComponent
-
   ],
   imports: [
     BrowserModule,
