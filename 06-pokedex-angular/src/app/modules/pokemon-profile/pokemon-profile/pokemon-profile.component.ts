@@ -57,4 +57,19 @@ export class PokemonProfileComponent implements OnInit {
     }
   }
 
+  getHeight() {
+    if (this.pokemon.height) {
+      return this.pokemon.height / 10;
+    } else {
+      return '';
+    }
+  }
+  getWeight() : number{
+    if (this.pokemon.weight) {
+      return this.pokemon.weight / 10;
+    } else {
+      return 0;
+    }
+  }
+
 }
