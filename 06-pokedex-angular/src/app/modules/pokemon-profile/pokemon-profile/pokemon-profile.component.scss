@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.pokemon-profile-container {
+    background-color: #e2ecff;
+    font-family: "Poppins";
+    height: 100%;
+    padding: 100px 0;
+    .central-container {
+        min-width: 500px;
+        max-width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .pokemon-img-container {
+            height: 300px;
+            margin-bottom: -150px;
+            z-index: 300;
+            img {
+                height: 100%;
+            }
+        }
+
+        .content-container {
+            padding: 200px 0 60px;
+            background-color: white;
+            box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+
+            border-radius: 30px;
+            h3 {
+                color: #0e2031;
+            }
+
+            .text-data,
+            .pokedex-entry-container,
+            .abilities-container,
+            .status-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-data {
+                p.poke-id {
+                    font-weight: bolder;
+                    color: #bbc4c5;
+                    font-weight: bolder;
+                }
+                h2 {
+                    color: #0e2031;
+                }
+                h4 {
+                    color: #bbc4c5;
+                }
+            }
+
+            .types-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                .type--badge {
+                    border: none;
+                    border-radius: 15px;
+                    padding: 1px 20px;
+                    margin-right: 10px;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    display: inline-flex;
+                    align-items: center;
+                    text-align: center;
+                  }
+            }
+
+            .pokedex-entry-container {
+                p {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    width: 90%;
+                }
+            }
+
+            .abilities-container {
+                div {
+                    width: 90%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                    span {
+                        border: 2px solid #0e2031;
+                        border-radius: 500px;
+                        padding: 10px 20px;
+                        text-align: center;
+                    }
+                }
+            }
+            .numeric-data-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h3 {
+                        margin: 10px 0;
+                    }
+                    span {
+                        background-color: #e4edfd;
+                        width: 50%;
+                        padding: 10px 20px;
+                        border-radius: 500px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .status-container {
+                div {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    width: 90%;
+                    p {
+                        background-color: #e4edfd;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

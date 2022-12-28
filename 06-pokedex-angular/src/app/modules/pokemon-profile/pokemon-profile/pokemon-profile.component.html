@@ -1,1 +1,51 @@
-<p>pokemon-profile works!</p>
+<div class="pokemon-profile-container">
+    <div class="central-container">
+        <div class="pokemon-img-container">
+            <img [src]="this.getSprite()"
+            [alt]="this.pokemon.name" />
+        </div>
+        <div class="content-container">
+            <div class="text-data">
+                <p class="poke-id"><strong>#{{this.pokemon.id}}</strong></p>
+                <h2>{{this.pokemon.name}}</h2>
+
+            </div>
+            <div class="types-container">
+                <span *ngFor="let type of this.pokemon.types"
+                    class="type--badge card-color {{type.type.name}}">{{type.type.name}}</span>
+            </div>
+            <div class="pokedex-entry-container">
+                <h3>descrição</h3>
+                <p>{{this.specie.flavor_text_entries[1].flavor_text}}</p>
+            </div>
+            <div class="abilities-container">
+                <h3>habilidades</h3>
+                <div>
+                    <span *ngFor="let abilitie of this.pokemon.abilities"
+                    >{{abilitie.ability.name}}</span>
+                </div>
+            </div>
+            <div class="numeric-data-container">
+                <div>
+                    <h3>Altura</h3>
+                    <span>{{this.pokemon.height}}</span>
+                </div>
+                <div>
+                    <h3>Peso</h3>
+                    <span>{{this.pokemon.weight}}</span>
+                </div>
+                <div>
+                    <h3>Base Exp</h3>
+                    <span>{{this.pokemon.base_experience}}</span>
+                </div>
+            </div>
+            <div class="status-container">
+                <h3>status</h3>
+                <div>
+                    <span *ngFor="let stat of this.pokemon.stats"
+                    >{{stat.stat.name}} | {{stat.base_stat}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

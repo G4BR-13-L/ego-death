@@ -9,7 +9,7 @@ const routes: Routes = [
     redirectTo: 'dashboard'
   },
   {
-    path: 'pokemon-profile',
+    path: 'pokemon-profile/:id',
     loadChildren: () => import('./modules/pokemon-profile/pokemon-profile.module').then(m => m.PokemonProfileModule)
   },
   {
