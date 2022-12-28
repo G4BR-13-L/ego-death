@@ -1,31 +1,29 @@
+<div class="card type-background {{this.type}}" Z>
 
-
-<div class="card type-background {{this.type}}"Z>
-  
   <div class="card-header">
     <div class="card--id">#{{this.pokemon.id}}</div>
     <div>
-      <span *ngFor="let type of this.pokemon.types" class="type--badge card-color {{type.type.name}}">{{type.type.name}}</span>
+      <span *ngFor="let type of this.pokemon.types"
+        class="type--badge card-color {{type.type.name}}">{{type.type.name}}</span>
     </div>
-    <div class="favorite-icon" >
+    <div class="favorite-icon">
       <!-- <i class='bx bx-star'  ></i> -->
       <i class='bx bxs-star' (click)="add()"></i>
     </div>
   </div>
+  <a [routerLink]="['/pokemon-profile', this.pokemon.id]">
 
 
-  <img class="card--image"
-  [src]="this.getSprite()"
-    [alt]="this.pokemon.name" />
-  <h1 class="card--name">{{this.pokemon.name}}</h1>
+    <img class="card--image" [src]="this.getSprite()" [alt]="this.pokemon.name" />
+    <h1 class="card--name">{{this.pokemon.name}}</h1>
 
-  <div class="card--details">
-    <span>
-      <strong>Height:</strong> {{this.getHeight()}}m
-    </span>
-    <span>
-      <strong>Weight:</strong> {{this.getWeight()}}kg
-    </span>
-  </div>
-
+    <div class="card--details">
+      <span>
+        <strong>Height:</strong> {{this.getHeight()}}m
+      </span>
+      <span>
+        <strong>Weight:</strong> {{this.getWeight()}}kg
+      </span>
+    </div>
+  </a>
 </div>
