@@ -17,6 +17,9 @@ export class DashboardComponent implements OnInit {
   history: Pokemon[] = [];
   favorites: Pokemon[] = [];
 
+  public historyIsCleanable: boolean = true;
+  public FavoritesIsCleanable: boolean = true;
+
   public pokemon: Pokemon = new Pokemon;
 
   public pokemonForm:FormGroup<any> = this.formBuilder.group({
@@ -76,6 +79,7 @@ export class DashboardComponent implements OnInit {
         return;
       }
     }
+    this.historyIsCleanable = false;
     this.history.push(poke);
     this.storage.savePokemon(poke);
   }
@@ -86,6 +90,7 @@ export class DashboardComponent implements OnInit {
         return;
       }
     }
+    this.FavoritesIsCleanable = false;
     if (this.favorites.length < 10) {
       this.favorites.push(poke);
       this.storage.saveFavorites(this.favorites);
@@ -107,6 +112,7 @@ export class DashboardComponent implements OnInit {
     if (confirm("Tem certeza que deseja apagar o histórico?")) {
       this.storage.cleanCollection('history');
       this.history = this.storage.getHistory();
+      this.historyIsCleanable = true;
     }
   }
 
@@ -114,6 +120,7 @@ export class DashboardComponent implements OnInit {
     if (confirm("Tem certeza que deseja apagar os favoritos?")) {
       this.storage.cleanCollection('favorites');
       this.favorites = this.storage.getFavorites();
+      this.FavoritesIsCleanable = true;
     }
   }
 }

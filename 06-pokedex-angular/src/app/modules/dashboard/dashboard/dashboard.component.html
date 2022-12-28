@@ -44,8 +44,8 @@
     <div class="options">
       <h4>Ferramentas</h4>
       <div>
-        <button (click)="cleanHistory()">Limpar Histórico</button>
-        <button (click)="cleanFavorites()">Limpar Favoritos</button>
+        <button (click)="cleanHistory()" [disabled]="this.historyIsCleanable">Limpar Histórico</button>
+        <button (click)="cleanFavorites()" [disabled]="this.FavoritesIsCleanable">Limpar Favoritos</button>
       </div>
     </div>
   </section>
