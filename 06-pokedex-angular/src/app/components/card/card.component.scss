@@ -1,7 +1,10 @@
-a{
+a {
   text-decoration: none;
-  color: black
+  color: black;
 }
+$neu-2: #d1d9e6;
+
+$white: #f9f9f9;
 
 .card {
   z-index: 60;
@@ -11,13 +14,17 @@ a{
   padding: 1.8rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+  //box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+
+  
+
+  //
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s ease-in-out all;
   &:hover {
-    box-shadow: 0 0px 30px rgba(255, 246, 246, 0.2), 0 3px 6px rgba(255, 255, 255, 0.3);
+    filter: brightness(1.2);
   }
   .card-header {
     display: flex;
@@ -47,7 +54,6 @@ a{
       }
     }
   }
-  
 }
 
 // .card:hover {

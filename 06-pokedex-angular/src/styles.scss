@@ -1,24 +1,38 @@
-$white: #fff !default;
-$black: #000 !default;
-$red: #e30303 !default;
-$orange: #fb5f11 !default;
-$geekorange: #fc9e70 !default;
-$gold: #ffc107 !default;
-$green: #52c41a !default;
-$blue: #11b1ff !default;
-$cyan: #00c9a7 !default;
-$purple: #886cff !default;
-$magenta: #eb2f96 !default;
-$volcano: #fa541c !default;
-$lime: #a0d911 !default;
-$geekblue: #7d94f0 !default;
-$darkblue: #021529 !default;
-$mediumblue: #008fd4 !default;
-$softorange: #fb5f111a !default;
-$softgreen: #ccebdf !default;
-$softblue: #7d94f0 !default;
-$darkgreen: #029c60 !default;
-$darkpurple: #653796 !default;
+// $white: #fff !default;
+// $black: #000 !default;
+// $red: #e30303 !default;
+// $orange: #fb5f11 !default;
+// $geekorange: #fc9e70 !default;
+// $gold: #ffc107 !default;
+// $green: #52c41a !default;
+// $blue: #11b1ff !default;
+// $cyan: #00c9a7 !default;
+// $purple: #886cff !default;
+// $magenta: #eb2f96 !default;
+// $volcano: #fa541c !default;
+// $lime: #a0d911 !default;
+// $geekblue: #7d94f0 !default;
+// $darkblue: #021529 !default;
+// $mediumblue: #008fd4 !default;
+// $softorange: #fb5f111a !default;
+// $softgreen: #ccebdf !default;
+// $softblue: #7d94f0 !default;
+// $darkgreen: #029c60 !default;
+// $darkpurple: #653796 !default;
+
+// Cores do design
+//
+:root{
+
+  --accent: #ff5350;
+  --accent-blue:#0e2031;
+  --bg: #f4f6fc;
+  --shadow-over-bg: #dbdbdb;
+} 
+$bg: var(--bg);
+$accent: var(--accent);
+$accent-blue: var(--accent-blue);
+$shadow-over-bg:var(--shadow-over-bg);
 
 $primary-green: rgba(35, 109, 35, 0.801) !default;
 $primary-purple: #5e0f5e !default;
@@ -35,7 +49,7 @@ $water-color: rgb(21, 142, 255) !default;
 $electric-color: rgb(255, 225, 55) !default;
 $psychic-color: rgb(158, 103, 77) !default;
 $ice-color: rgb(73, 255, 231) !default;
-$dragon-color: rgb(160, 52, 52) !default;
+$dragon-color: rgb(239, 74, 74) !default;
 $dark-color: rgb(0, 0, 0) !default;
 $fairy-color: rgb(103, 189, 146) !default;
 $unknown-color: rgb(255, 213, 213) !default;
@@ -56,11 +70,13 @@ $water-color-gradient: linear-gradient(130deg, rgba(21, 142, 255, 1) 0%, rgb(19,
 $electric-color-gradient: linear-gradient(130deg, rgba(255, 225, 55, 1) 0%, rgb(255, 253, 120) 100%) !default;
 $psychic-color-gradient: linear-gradient(130deg, rgba(158, 103, 77, 1) 0%, rgb(219, 172, 141) 100%) !default;
 $ice-color-gradient: linear-gradient(130deg, rgba(73, 255, 231, 1) 0%, rgb(0, 133, 126) 100%) !default;
-$dragon-color-gradient: linear-gradient(130deg, rgba(160, 52, 52, 1) 0%, rgb(58, 94, 55) 100%) !default;
+$dragon-color-gradient: linear-gradient(130deg, rgba(239, 74, 74, 1) 0%, rgb(89, 198, 80) 100%) !default;
 $dark-color-gradient: linear-gradient(130deg, rgba(0, 0, 0, 1) 0%, rgb(58, 7, 58) 100%) !default;
 $fairy-color-gradient: linear-gradient(130deg, rgba(103, 189, 146, 1) 0%, rgb(209, 142, 209) 100%) !default;
 $unknown-color-gradient: linear-gradient(130deg, rgba(255, 213, 213, 1) 0%, rgb(124, 124, 124) 100%) !default;
 $shadow-color-gradient: linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 22, 87) 100%) !default;
+
+
 
 @import url("./_variables.scss");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -73,74 +89,231 @@ $shadow-color-gradient: linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 
 html,
 body {
   font-family: "Poppins", sans-serif;
-  background: #e2ecff;
+  background: $bg;
   z-index: -3;
 }
+
+
+$big-card-pxa:23px;
+$big-card-pxb:23px;
+$big-card-pxc:106px;
+
 
 .type-background {
   &.poison {
     background: $primary-green-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $primary-green,
+             -23px -23px 46px #ffffff;
   }
 
   &.grass {
     background: $primary-purple-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $primary-purple,
+             -23px -23px 46px #ffffff;
   }
 
   &.fire {
     background: $fire-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $fire-color,
+             -23px -23px 46px #ffffff;
   }
 
   &.normal {
     background: $normal-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $normal-color,
+             -23px -23px 46px #ffffff;
   }
   &.fighting {
     background: $fighting-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $fighting-color,
+             -23px -23px 46px #ffffff;
   }
   &.flying {
     background: $flying-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $flying-color,
+             -23px -23px 46px #ffffff;
   }
   &.ground {
     background: $ground-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $ground-color,
+             -23px -23px 46px #ffffff;
   }
   &.rock {
     background: $rock-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $rock-color,
+             -23px -23px 46px #ffffff;
   }
   &.bug {
     background: $bug-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $bug-color,
+             -23px -23px 46px #ffffff;
   }
   &.ghost {
     background: $ghost-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $ghost-color,
+             -23px -23px 46px #ffffff;
   }
   &.steel {
     background: $steel-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $steel-color,
+             -23px -23px 46px #ffffff;
   }
 
   &.water {
     background: $water-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $water-color,
+             -23px -23px 46px #ffffff;
   }
   &.electric {
     background: $electric-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $electric-color,
+             -23px -23px 46px #ffffff;
   }
   &.psychic {
     background: $psychic-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $psychic-color,
+             -23px -23px 46px #ffffff;
   }
   &.ice {
     background: $ice-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $ice-color,
+             -23px -23px 46px #ffffff;
   }
   &.dragon {
     background: $dragon-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $dragon-color,
+             -23px -23px 46px #ffffff;
   }
   &.dark {
     background: $dark-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $dark-color,
+             -23px -23px 46px #ffffff;
   }
   &.fairy {
     background: $fairy-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $fairy-color,
+             -23px -23px 46px #ffffff;
   }
   &.unknown {
     background: $unknown-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $unknown-color,
+             -23px -23px 46px #ffffff;
   }
   &.shadow {
     background: $shadow-color-gradient;
+    box-shadow:  $big-card-pxa $big-card-pxb $big-card-pxc $shadow-color,
+             -23px -23px 46px #ffffff;
+  }
+}
+
+
+
+$pokemon-card-pxa: 12px;
+$pokemon-card-pxb: 12px;
+$pokemon-card-pxc: 40px;
+
+
+.card-styled {
+  &.poison {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+
+  &.grass {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.fire {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.normal {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.fighting {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.flying {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.ground {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.rock {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.bug {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.ghost {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.steel {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.water {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.electric {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.psychic {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.ice {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.dragon {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.dark {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.fairy {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.unknown {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
+  }
+  &.shadow {
+    background: white;
+    box-shadow:  $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg,
+             -23px -23px 46px #ffffff;
   }
 }
 
