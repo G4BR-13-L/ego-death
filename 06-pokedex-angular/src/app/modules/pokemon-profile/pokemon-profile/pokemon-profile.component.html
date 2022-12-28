@@ -4,7 +4,7 @@
             <img [src]="this.getSprite()"
             [alt]="this.pokemon.name" />
         </div>
-        <div class="content-container">
+        <div class="content-container card-styled {{this.pokemon.types[0].type.name}}">
             <div class="text-data">
                 <p class="poke-id"><strong>#{{this.pokemon.id}}</strong></p>
                 <h2>{{this.pokemon.name}}</h2>
