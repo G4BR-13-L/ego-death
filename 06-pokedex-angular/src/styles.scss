@@ -41,29 +41,29 @@ $fairy-color: rgb(103, 189, 146) !default;
 $unknown-color: rgb(255, 213, 213) !default;
 $shadow-color: rgb(20, 16, 56) !default;
 
-$primary-green-gradient:linear-gradient(130deg, rgba(154, 48, 240, 1) 0%, rgb(160, 64, 16) 100%) !default;
-$primary-purple-gradient:linear-gradient(130deg, rgb(120, 200, 80) 0%, rgb(160, 64, 16) 100%) !default;
-$fire-color-gradient:linear-gradient(130deg, rgba(240, 128, 48, 1) 0%, rgb(160, 64, 16) 100%) !default;
-$normal-color-gradient:linear-gradient(130deg, rgba(104, 104, 104, 1) 0%, rgb(219, 219, 219) 100%) !default;
-$fighting-color-gradient:linear-gradient(130deg, rgba(255, 177, 122, 1) 0%, rgba(59, 54, 25, 0.774) 100%) !default;
-$flying-color-gradient:linear-gradient(130deg, rgba(164, 244, 255, 1) 0%, rgb(204, 204, 204) 100%) !default;
-$ground-color-gradient:linear-gradient(130deg, rgba(95, 48, 14, 1) 0%, rgb(187, 136, 41) 100%) !default;
-$rock-color-gradient:linear-gradient(130deg, rgba(48, 48, 48, 1) 0%, rgb(155, 155, 155) 100%) !default;
-$bug-color-gradient:linear-gradient(130deg, rgba(79, 109, 82, 1) 0%, rgb(104, 70, 51) 100%) !default;
-$ghost-color-gradient:linear-gradient(130deg, rgba(243, 243, 243, 1) 0%, rgb(255, 184, 255) 100%) !default;
-$steel-color-gradient:linear-gradient(130deg, rgba(161, 161, 161, 1) 0%, rgb(90, 90, 90) 100%) !default;
-$water-color-gradient:linear-gradient(130deg, rgba(21, 142, 255, 1) 0%, rgb(19, 255, 243) 100%) !default;
-$electric-color-gradient:linear-gradient(130deg, rgba(255, 225, 55, 1) 0%, rgb(255, 253, 120) 100%) !default;
-$psychic-color-gradient:linear-gradient(130deg, rgba(158, 103, 77, 1) 0%, rgb(219, 172, 141) 100%) !default;
-$ice-color-gradient:linear-gradient(130deg, rgba(73, 255, 231, 1) 0%, rgb(0, 133, 126) 100%) !default;
-$dragon-color-gradient:linear-gradient(130deg, rgba(160, 52, 52, 1) 0%, rgb(58, 94, 55) 100%) !default;
-$dark-color-gradient:linear-gradient(130deg, rgba(0, 0, 0, 1) 0%, rgb(58, 7, 58) 100%) !default;
-$fairy-color-gradient:linear-gradient(130deg, rgba(103, 189, 146, 1) 0%, rgb(209, 142, 209) 100%) !default;
-$unknown-color-gradient:linear-gradient(130deg, rgba(255, 213, 213, 1) 0%, rgb(124, 124, 124) 100%) !default;
-$shadow-color-gradient:linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 22, 87) 100%) !default;
+$primary-green-gradient: linear-gradient(130deg, rgba(154, 48, 240, 1) 0%, rgb(160, 64, 16) 100%) !default;
+$primary-purple-gradient: linear-gradient(130deg, rgb(120, 200, 80) 0%, rgb(160, 64, 16) 100%) !default;
+$fire-color-gradient: linear-gradient(130deg, rgba(240, 128, 48, 1) 0%, rgb(160, 64, 16) 100%) !default;
+$normal-color-gradient: linear-gradient(130deg, rgba(104, 104, 104, 1) 0%, rgb(219, 219, 219) 100%) !default;
+$fighting-color-gradient: linear-gradient(130deg, rgba(255, 177, 122, 1) 0%, rgba(59, 54, 25, 0.774) 100%) !default;
+$flying-color-gradient: linear-gradient(130deg, rgba(164, 244, 255, 1) 0%, rgb(204, 204, 204) 100%) !default;
+$ground-color-gradient: linear-gradient(130deg, rgba(95, 48, 14, 1) 0%, rgb(187, 136, 41) 100%) !default;
+$rock-color-gradient: linear-gradient(130deg, rgba(48, 48, 48, 1) 0%, rgb(155, 155, 155) 100%) !default;
+$bug-color-gradient: linear-gradient(130deg, rgba(79, 109, 82, 1) 0%, rgb(104, 70, 51) 100%) !default;
+$ghost-color-gradient: linear-gradient(130deg, rgba(243, 243, 243, 1) 0%, rgb(255, 184, 255) 100%) !default;
+$steel-color-gradient: linear-gradient(130deg, rgba(161, 161, 161, 1) 0%, rgb(90, 90, 90) 100%) !default;
+$water-color-gradient: linear-gradient(130deg, rgba(21, 142, 255, 1) 0%, rgb(19, 255, 243) 100%) !default;
+$electric-color-gradient: linear-gradient(130deg, rgba(255, 225, 55, 1) 0%, rgb(255, 253, 120) 100%) !default;
+$psychic-color-gradient: linear-gradient(130deg, rgba(158, 103, 77, 1) 0%, rgb(219, 172, 141) 100%) !default;
+$ice-color-gradient: linear-gradient(130deg, rgba(73, 255, 231, 1) 0%, rgb(0, 133, 126) 100%) !default;
+$dragon-color-gradient: linear-gradient(130deg, rgba(160, 52, 52, 1) 0%, rgb(58, 94, 55) 100%) !default;
+$dark-color-gradient: linear-gradient(130deg, rgba(0, 0, 0, 1) 0%, rgb(58, 7, 58) 100%) !default;
+$fairy-color-gradient: linear-gradient(130deg, rgba(103, 189, 146, 1) 0%, rgb(209, 142, 209) 100%) !default;
+$unknown-color-gradient: linear-gradient(130deg, rgba(255, 213, 213, 1) 0%, rgb(124, 124, 124) 100%) !default;
+$shadow-color-gradient: linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 22, 87) 100%) !default;
 
-@import url('./_variables.scss');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("./_variables.scss");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -72,80 +72,79 @@ $shadow-color-gradient:linear-gradient(130deg, rgba(20, 16, 56, 1) 0%, rgb(40, 2
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
-  background: rgb(0,1,27);
+  font-family: "Poppins", sans-serif;
+  background: rgb(0, 1, 27);
   z-index: -3;
-  
 }
 
 .type-background {
   &.poison {
-    background:$primary-green-gradient; 
+    background: $primary-green-gradient;
   }
-  
+
   &.grass {
-    background:$primary-purple-gradient; 
+    background: $primary-purple-gradient;
   }
-  
+
   &.fire {
-    background:$fire-color-gradient; 
+    background: $fire-color-gradient;
   }
-  
+
   &.normal {
-      background:$normal-color-gradient; 
+    background: $normal-color-gradient;
   }
   &.fighting {
-      background:$fighting-color-gradient; 
+    background: $fighting-color-gradient;
   }
   &.flying {
-      background:$flying-color-gradient; 
+    background: $flying-color-gradient;
   }
   &.ground {
-      background:$ground-color-gradient; 
+    background: $ground-color-gradient;
   }
   &.rock {
-      background:$rock-color-gradient; 
+    background: $rock-color-gradient;
   }
   &.bug {
-      background:$bug-color-gradient; 
+    background: $bug-color-gradient;
   }
   &.ghost {
-      background:$ghost-color-gradient; 
+    background: $ghost-color-gradient;
   }
   &.steel {
-      background:$steel-color-gradient; 
+    background: $steel-color-gradient;
   }
 
   &.water {
-      background:$water-color-gradient; 
+    background: $water-color-gradient;
   }
   &.electric {
-      background:$electric-color-gradient; 
+    background: $electric-color-gradient;
   }
   &.psychic {
-      background:$psychic-color-gradient; 
+    background: $psychic-color-gradient;
   }
   &.ice {
-      background:$ice-color-gradient; 
+    background: $ice-color-gradient;
   }
   &.dragon {
-      background:$dragon-color-gradient; 
+    background: $dragon-color-gradient;
   }
   &.dark {
-      background:$dark-color-gradient; 
+    background: $dark-color-gradient;
   }
   &.fairy {
-      background:$fairy-color-gradient; 
+    background: $fairy-color-gradient;
   }
   &.unknown {
-      background:$unknown-color-gradient; 
+    background: $unknown-color-gradient;
   }
   &.shadow {
-      background:$shadow-color-gradient; 
+    background: $shadow-color-gradient;
   }
 }
 
-.card-color{
+.card-color {
   &.poison {
     background: $primary-purple;
   }
@@ -207,4 +206,31 @@ body {
   &.shadow {
     background: $shadow-color;
   }
+}
+
+.chip-color {
+  &.hp {
+    background-color: #df2140;
+  }
+
+  &.attack {
+    background-color: #ff994d;
+  
+  }
+  &.defense {
+    background-color: #ffdc41;
+  
+  }
+  &.special-attack {
+    background-color: #85ddff;
+  
+  }
+  &.special-defense {
+    background-color: #a8ef95;
+  
+  }
+  &.speed {
+    background-color: #e87a7d;
+  }
+
 }

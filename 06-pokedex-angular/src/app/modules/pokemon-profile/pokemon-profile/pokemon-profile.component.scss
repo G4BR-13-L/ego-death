@@ -113,17 +113,33 @@
             }
 
             .status-container {
-                div {
+                .chip-wrapper {
+                    flex-wrap: wrap;
                     display: flex;
                     justify-content: space-evenly;
                     flex-direction: row;
-                    width: 90%;
-                    p {
+                    width: 80%;
+                    .status-chip{
                         background-color: #e4edfd;
-                        border-radius: 50%;
-                        width: 50px;
-                        height: 50px;
-                        overflow: hidden;
+                        margin: 10px;
+                        height: 35px;
+                        border-radius: 400px;
+                        padding: 5px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        .param{
+                            border-radius: 500px;
+                            padding: 0 20px;
+                            min-width: 30px;
+                            height: 30px;
+                            font-weight: bold;
+                
+                        }
+                        .value{
+                            padding: 0 20px;
+                        }
                     }
                 }
             }

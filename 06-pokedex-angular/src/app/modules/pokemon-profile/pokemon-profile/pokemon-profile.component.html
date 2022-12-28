@@ -41,9 +41,15 @@
             </div>
             <div class="status-container">
                 <h3>status</h3>
-                <div>
-                    <span *ngFor="let stat of this.pokemon.stats"
-                    >{{stat.stat.name}} | {{stat.base_stat}}</span>
+                <div class="chip-wrapper">
+                    <div class="status-chip " *ngFor="let stat of this.pokemon.stats">
+                        <div class="param chip-color {{stat.stat.name}}">
+                            {{stat.stat.name}}
+                        </div>
+                        <div class="value">
+                            {{stat.base_stat}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
