@@ -42,6 +42,11 @@ export class DashboardComponent implements OnInit {
     this.storage.init();
     this.history = this.storage.getHistory();
     this.favorites = this.storage.getFavorites();
+    if( this.history.length > 0 ){
+      this.historyIsCleanable = false;
+    } if( this.favorites.length > 0 ){
+      this.FavoritesIsCleanable = false;
+    }
     this.service = this.service;
     this.service.find("arceus").subscribe({
       next: (result: Pokemon) => {
