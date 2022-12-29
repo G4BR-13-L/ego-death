@@ -10,8 +10,10 @@
   </header>
   
   <section class="search-container">
-    <form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
-      <input type="text" name="" id="" formControlName="pokemonName" required>
+    <form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()" (keypress)="keyPressEnter($event)">
+      <input type="text" name="" id="" formControlName="pokemonName" required
+      (keypress)="keyPressAlphaNumeric($event)"
+      >
       <button class="button" type="submit"><i class='bx bx-search-alt'></i></button>
     </form>
   </section>

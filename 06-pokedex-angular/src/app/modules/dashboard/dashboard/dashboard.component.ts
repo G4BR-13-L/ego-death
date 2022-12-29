@@ -37,6 +37,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
+
   ngOnInit() {
     this.storage.init();
     this.history = this.storage.getHistory();
@@ -54,6 +55,25 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  keyPressAlphaNumeric(event: { keyCode: number; preventDefault: () => void; }) {
+    var inp = String.fromCharCode(event.keyCode);
+    if (/[a-zA-Z0-9\n]/.test(inp)) {
+      return true;
+    } else {
+      event.preventDefault();
+      return false;
+    }
+  }
+  
+  keyPressEnter(event: { which: any; keyCode: any; preventDefault: () => void; }) {
+    var charCode = event.keyCode;
+    if (charCode == 13) {
+      this.onSubmit();
+      return true;
+    } else {
+      return;
+    }
+  }
   onSubmit(): void {
     this.service.find(
       this.pokemonForm.value.pokemonName
