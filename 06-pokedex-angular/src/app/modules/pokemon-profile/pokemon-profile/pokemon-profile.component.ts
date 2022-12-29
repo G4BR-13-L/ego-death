@@ -1,8 +1,9 @@
-import { Specie } from './../../../domains/Specie';
+import { Specie, EvolutionChain } from './../../../domains/Specie';
 import { Pokemon } from './../../../domains/Pokemon';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ConsumerService } from 'src/app/services/consumer/consumer.service';
+
 
 @Component({
   selector: 'app-pokemon-profile',
@@ -13,6 +14,7 @@ export class PokemonProfileComponent implements OnInit {
 
   public pokemon: Pokemon = new Pokemon;
   public specie: Specie = new Specie;
+  public evolutionChain: EvolutionChain;
   public pokemonId: string = '';
   constructor(
     private router: Router,
@@ -42,6 +44,17 @@ export class PokemonProfileComponent implements OnInit {
       next: (result: Specie) => {
         this.specie = result;
         console.log(result as Specie)
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+
+    this.service.getEvolutionChain(this.pokemonId.replace('#','')).subscribe({
+      next: (result: EvolutionChain) => {
+        this.evolutionChain = result;
+        console.log("EVOLUTION")
+        console.log(result as EvolutionChain)
       },
       error: (error) => {
         console.log(error)
