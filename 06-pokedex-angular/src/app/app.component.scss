@@ -1,0 +1,20 @@
+.footer-container{
+    display: grid;
+    place-items: center;
+    height: 100px;
+    a{
+        text-decoration: none;
+        color: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #777;
+        p{
+            margin-right: 8px;
+        }
+        i{
+            font-size: 1.5rem;
+        }
+    }
+}

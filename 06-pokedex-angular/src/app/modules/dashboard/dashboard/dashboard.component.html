@@ -14,7 +14,8 @@
       <input type="text" name="" id="" formControlName="pokemonName" required
       (keypress)="keyPressAlphaNumeric($event)"
       >
-      <button class="button" type="submit"><i class='bx bx-search-alt'></i></button>
+      <button class="button card-color {{this.pokemon.types[0].type.name}}" type="submit">
+        <i class='bx bx-search-alt'></i></button>
     </form>
   </section>
 
