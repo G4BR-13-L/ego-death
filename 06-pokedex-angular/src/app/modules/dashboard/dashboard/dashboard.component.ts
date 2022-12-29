@@ -104,6 +104,7 @@ export class DashboardComponent implements OnInit {
           },
           error: (error) => {
             console.log(error)
+            window.alert('Pokemon não encontrado 😔')
           }
         })
     console.log("Ok:" + this.pokemonName)
