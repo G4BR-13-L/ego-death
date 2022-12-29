@@ -190,108 +190,216 @@ $pokemon-card-pxc: 40px;
   box-shadow: $pokemon-card-pxa $pokemon-card-pxb $pokemon-card-pxc $shadow-over-bg, -23px -23px 46px #ffffff;
 }
 
-$pokemon-card-colored-pxa: 0px;
-$pokemon-card-colored-pxb: -100px;
-$pokemon-card-colored-pxc: 200px;
+$card-colored-pxa: 0px;
+$card-colored-pxb: -100px;
+$card-colored-pxc: 200px;
 
-.card-styled {
+.card-styled-colored {
   &.poison {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $primary-green,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $primary-green,
       -23px -23px 46px #ffffff;
   }
 
   &.grass {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $primary-purple,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $primary-purple,
       -23px -23px 46px #ffffff;
   }
   &.fire {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fire-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $fire-color,
       -23px -23px 46px #ffffff;
   }
   &.normal {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $normal-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $normal-color,
       -23px -23px 46px #ffffff;
   }
   &.fighting {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fighting-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $fighting-color,
       -23px -23px 46px #ffffff;
   }
   &.flying {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $flying-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $flying-color,
       -23px -23px 46px #ffffff;
   }
   &.ground {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ground-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $ground-color,
       -23px -23px 46px #ffffff;
   }
   &.rock {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $rock-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $rock-color,
       -23px -23px 46px #ffffff;
   }
   &.bug {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $bug-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $bug-color,
       -23px -23px 46px #ffffff;
   }
   &.ghost {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ghost-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $ghost-color,
       -23px -23px 46px #ffffff;
   }
   &.steel {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $steel-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $steel-color,
       -23px -23px 46px #ffffff;
   }
   &.water {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $water-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $water-color,
       -23px -23px 46px #ffffff;
   }
   &.electric {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $electric-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $electric-color,
       -23px -23px 46px #ffffff;
   }
   &.psychic {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $psychic-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $psychic-color,
       -23px -23px 46px #ffffff;
   }
   &.ice {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ice-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $ice-color,
       -23px -23px 46px #ffffff;
   }
   &.dragon {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $dragon-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $dragon-color,
       -23px -23px 46px #ffffff;
   }
   &.dark {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $dark-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $dark-color,
       -23px -23px 46px #ffffff;
   }
   &.fairy {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fairy-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $fairy-color,
       -23px -23px 46px #ffffff;
   }
   &.unknown {
     background: white;
-    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $unknown-color,
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $unknown-color,
       -23px -23px 46px #ffffff;
   }
   &.shadow {
+    background: white;
+    box-shadow: $card-colored-pxa $card-colored-pxb $card-colored-pxc $shadow-color,
+      -23px -23px 46px #ffffff;
+  }
+}
+
+$pokemon-card-colored-pxa: 0px;
+$pokemon-card-colored-pxb: 20px;
+$pokemon-card-colored-pxc: 100px;
+
+.pokemon-card-styled-colored {
+  &.poison:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $primary-green,
+      -23px -23px 46px #ffffff;
+  }
+
+  &.grass:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $primary-purple,
+      -23px -23px 46px #ffffff;
+  }
+  &.fire:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fire-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.normal:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $normal-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.fighting:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fighting-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.flying:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $flying-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.ground:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ground-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.rock:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $rock-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.bug:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $bug-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.ghost:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ghost-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.steel:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $steel-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.water:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $water-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.electric:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $electric-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.psychic:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $psychic-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.ice:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $ice-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.dragon:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $dragon-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.dark:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $dark-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.fairy:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $fairy-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.unknown:hover {
+    background: white;
+    box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $unknown-color,
+      -23px -23px 46px #ffffff;
+  }
+  &.shadow:hover {
     background: white;
     box-shadow: $pokemon-card-colored-pxa $pokemon-card-colored-pxb $pokemon-card-colored-pxc $shadow-color,
       -23px -23px 46px #ffffff;
