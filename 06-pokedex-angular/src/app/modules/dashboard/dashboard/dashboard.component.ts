@@ -19,10 +19,11 @@ export class DashboardComponent implements OnInit {
 
   public historyIsCleanable: boolean = true;
   public FavoritesIsCleanable: boolean = true;
+  public listaNegraDeCaracteres: string[] = ['¨', '¨¨', '&', '¨¨&'];
 
   public pokemon: Pokemon = new Pokemon;
 
-  public pokemonForm:FormGroup<any> = this.formBuilder.group({
+  public pokemonForm: FormGroup<any> = this.formBuilder.group({
     pokemonName: ['', [
       Validators.required,
       Validators.maxLength(10)
@@ -33,7 +34,7 @@ export class DashboardComponent implements OnInit {
     private service: ConsumerService,
     private formBuilder: FormBuilder,
     private storage: StorageService
-    ) {
+  ) {
 
   }
 
@@ -42,9 +43,9 @@ export class DashboardComponent implements OnInit {
     this.storage.init();
     this.history = this.storage.getHistory();
     this.favorites = this.storage.getFavorites();
-    if( this.history.length > 0 ){
+    if (this.history.length > 0) {
       this.historyIsCleanable = false;
-    } if( this.favorites.length > 0 ){
+    } if (this.favorites.length > 0) {
       this.FavoritesIsCleanable = false;
     }
     this.service = this.service;
@@ -69,7 +70,7 @@ export class DashboardComponent implements OnInit {
       return false;
     }
   }
-  
+
   keyPressEnter(event: { which: any; keyCode: any; preventDefault: () => void; }) {
     var charCode = event.keyCode;
     if (charCode == 13) {
@@ -79,13 +80,23 @@ export class DashboardComponent implements OnInit {
       return;
     }
   }
+
+  prepareString(str: string): string {
+
+    for (let i = 0; i < this.listaNegraDeCaracteres.length; i++) {
+      str.replace(this.listaNegraDeCaracteres[i], '');
+    }
+
+    return str;
+
+  }
   onSubmit(): void {
     this.service.find(
-      this.pokemonForm.value.pokemonName
+      this.prepareString(this.pokemonForm.value.pokemonName
         .toLowerCase()
         .trim()
         .replace(',', '')
-        .replace('#', '')).subscribe({
+        .replace('#', ''))).subscribe({
           next: (result: Pokemon) => {
             this.pokemon = result;
             this.addToHistory(this.pokemon)
@@ -129,7 +140,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  viewPokemon(poke: Pokemon) : void{
+  viewPokemon(poke: Pokemon): void {
     this.pokemon = poke;
   }
 
