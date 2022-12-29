@@ -383,3 +383,68 @@ $pokemon-card-colored-pxc: 200px;
     background-color: #e87a7d;
   }
 }
+
+
+.text-type-color{
+  &.poison {
+    color: rgba($primary-purple, 0.8);
+  }
+
+  &.grass {
+    color: rgba($primary-green, 0.8);
+  }
+  &.fire {
+    color: rgba($fire-color, 0.8);
+  }
+  &.normal {
+    color: rgba($normal-color, 0.8);
+  }
+  &.fighting {
+    color: rgba($fighting-color, 0.8);
+  }
+  &.flying {
+    color: rgba($flying-color, 0.8);
+  }
+  &.ground {
+    color: rgba($ground-color, 0.8);
+  }
+  &.rock {
+    color: rgba($rock-color, 0.8);
+  }
+  &.bug {
+    color: rgba($bug-color, 0.8);
+  }
+  &.ghost {
+    color: rgba($ghost-color, 0.8);
+  }
+  &.steel {
+    color: rgba($steel-color, 0.8);
+  }
+  &.water {
+    color: rgba($water-color, 0.8);
+  }
+  &.electric {
+    color: rgba($electric-color, 0.8);
+  }
+  &.psychic {
+    color: rgba($psychic-color, 0.8);
+  }
+  &.ice {
+    color: rgba($ice-color, 0.8);
+  }
+  &.dragon {
+    color: rgba($dragon-color, 0.8);
+  }
+  &.dark {
+    color: rgba($dark-color, 0.8);
+  }
+  &.fairy {
+    color: rgba($fairy-color, 0.8);
+  }
+  &.unknown {
+    color: rgba($unknown-color, 0.8);
+  }
+  &.shadow {
+    color: rgba($shadow-color, 0.8);
+  }
+}
