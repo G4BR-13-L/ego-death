@@ -1,5 +1,5 @@
 .pokemon-profile-container {
-    background-color: #e2ecff;
+    background-color: var(--bg);
     font-family: "Poppins";
     height: 100%;
     padding: 100px 0;
@@ -158,7 +158,7 @@
 
 @media (max-width: 640px) {
     .pokemon-profile-container {
-        background-color: #e2ecff;
+        background-color: var(--bg);
         font-family: "Poppins";
         height: 100%;
         padding: 100px 0;
