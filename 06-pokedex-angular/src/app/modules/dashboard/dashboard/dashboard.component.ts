@@ -121,7 +121,7 @@ export class DashboardComponent implements OnInit {
     this.storage.savePokemon(poke);
   }
   addToFavorites(poke: Pokemon): void {
-    console.log("Adicionaod aos favoritos: " + poke.name)
+    console.log("Adicionado aos favoritos: " + poke.name)
     for (let p of this.favorites) {
       if (p.id == poke.id) {
         return;
